@@ -46,7 +46,7 @@ class App(customtkinter.CTk):
         nombre = self.txt_nombre.get()
         edad = self.txt_edad.get()
         #concatenar permite cambiar el contnido del mensaje
-        #se utiliza el + para eso
+        #se utiliza el "+"" para eso, se pone el valor variable entre los signos "+"
         #concatenar"Usted se llama José y su edad es 66 años"
         alert(title="Hola",message="Usted se llama " + nombre + " y su edad es " + edad + " años")
 
