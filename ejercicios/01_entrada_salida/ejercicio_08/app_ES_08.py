@@ -41,7 +41,15 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        numero_uno_texto = self.txt_operador_a.get()
+        numero_uno_a_numero = int(numero_uno_texto)
+        numero_dos_texto = self.txt_operador_b.get()
+        numero_dos_a_numero = int(numero_dos_texto)
+        resto= numero_uno_a_numero % numero_dos_a_numero
+        alert(title = "divisor",message = "el resto es: " + resto)
+        
+       
+        
         
         
     

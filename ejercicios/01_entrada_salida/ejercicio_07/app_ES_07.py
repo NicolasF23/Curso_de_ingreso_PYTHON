@@ -5,13 +5,13 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre:Nicolas
+apellido:Couso
 ---
 Ejercicio: entrada_salida_07
 ---
 Enunciado:
-Al presionar el botón  que corresponde a cada operación (suma, resta, multiplicación, y división), 
+Al presionar el botón  que corresponde a cada operación (suma+, resta-, multiplicación*, y división//), 
 se deberán obtener los valores contenidos en las cajas de texto (txtOperadorA y txtOperadorB), 
 transformarlos en números enteros, realizar dicha operación y luego mostrar el resultado 
 de la misma utilizando el Dialog Alert. Ej: "El resultado de la …… es: 755"  
@@ -50,16 +50,26 @@ class App(customtkinter.CTk):
         self.btn_dividir.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_sumar_on_click(self):
-        pass
+        operador_a = int(self.txt_operador_a.get())
+        operador_b = int(self.txt_operador_b.get())
+        alert(title="resultado",message=f"el resultado de la suma es: {operador_a + operador_b}")
 
     def btn_restar_on_click(self):
-        pass
+     operador_a = int(self.txt_operador_a.get())
+     operador_b = int(self.txt_operador_b.get())
+     alert(title="resultado",message=f"el resultado de la resta es: {operador_a - operador_b}")
+       
 
     def btn_multiplicar_on_click(self):
-        pass
+        operador_a = int(self.txt_operador_a.get())
+        operador_b = int(self.txt_operador_b.get())
+        alert(title="resultado",message=f"el resultado de la multiplicacion es es: {operador_a * operador_b}")
+        
 
     def btn_dividir_on_click(self):
-        pass
+        operador_a = int(self.txt_operador_a.get())
+        operador_b = int(self.txt_operador_b.get())
+        alert(title="resultado",message=f"el resultado de la division es: {operador_a // operador_b}")
         
 if __name__ == "__main__":
     app = App()
