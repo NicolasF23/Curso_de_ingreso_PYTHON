@@ -40,14 +40,16 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        PRECIO = 1000 
+        sueldo=self.txt_sueldo.get()
+        sueldo_numero=float(sueldo) 
+        incremento=self.txt_incremento.get()
+        incremento_numero=float(incremento)
+        resultado=sueldo_numero * incremento_numero / 100 
+        resultado_final=sueldo_numero + resultado
         
-        #descuento = PRECIO * 10 / 100
-        #porcentaje = PRECIO * 0.10
-        #precio_final = PRECIO - descuento
-        precio_final = PRECIO * 0.90
         
-        print(precio_final)
+        alert(title = "ejemplo 09", message= resultado_final)
+        
         
         
         

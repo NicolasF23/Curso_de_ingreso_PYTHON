@@ -46,7 +46,9 @@ class App(customtkinter.CTk):
         numero_dos_texto = self.txt_operador_b.get()
         numero_dos_a_numero = int(numero_dos_texto)
         resto= numero_uno_a_numero % numero_dos_a_numero
-        alert(title = "divisor",message = "el resto es: " + resto)
+       
+        alert(title="resultado",message=f"el resto de la division es: { resto }")
+        #alert(title = "el resto es",message = resto)
         
        
         
