@@ -56,7 +56,13 @@ class App(customtkinter.CTk):
                 mensaje = "El descuento es de {0}".format(descuento_B_40) 
             else:
                 descuento_B_30 = precio_lamparitas * 30 / 100
-                mensaje = "El descuento es de {0}".format(descuento_B_30)    
+                mensaje = "El descuento es de {0}".format(descuento_B_30) 
+        elif cantidad_lamparitas == 4 and marca == "ArgentinaLuz" or marca == "FelipeLamparas":
+            descuento_C_25 = precio_lamparitas * 25 /100
+            mensaje = "El descuento es de {0}".format(descuento_C_25)
+        elif cantidad_lamparitas == 4 and marca != "ArgentinaLuz" and marca != "FelipeLamparas": 
+            descuento_C_20 = precio_lamparitas * 20 / 100
+            mensaje = "el descuento es de {0}".format(descuento_C_20)            
                   
         
         alert(title = "TP4",message = mensaje)    
