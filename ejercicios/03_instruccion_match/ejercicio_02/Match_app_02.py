@@ -6,6 +6,8 @@ import customtkinter
 
 
 '''
+Nombre: Nicolas
+Apellido: Couso
 Enunciado:
 Al presionar el botón ‘Informar’ mostrar mediante alert los siguientes mensajes 
 en función del mes seleccionado:
@@ -36,8 +38,28 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
+        #Si estamos en invierno: ‘¡Abrígate que hace frío!’
+        #Si aún no llegó el invierno: ‘Falta para el invierno..’
+        #Si ya pasó el invierno: ‘¡Ya pasamos frío, ahora calor!’
+        
+        mes = prompt("Estacion","Ingrese la estacion actual") 
+        
+        match mes:
+            case "enero"|"Febrero"|"Marzo"|"Abril"|"Mayo"|"Junio":
+                mensaje = "Falta para el invierno.."
+            case "Julio"|"Agosto":
+                mensaje = "¡Abrígate que hace frío!"
+            case "Septiembre"|"Octubre"|"Noviembre"|"Diciembre":
+                mensaje = "¡Ya pasamos frío, ahora calor!"
+            case _:
+                mensaje = None
+        
+        alert(title = "Eestacion", message = mensaje)            
+                
+
+
     
+
     
 if __name__ == "__main__":
     app = App()

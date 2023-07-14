@@ -43,32 +43,46 @@ class App(customtkinter.CTk):
         cantidad_lamparitas = self.combobox_cantidad.get()
         cantidad_lamparitas = int(cantidad_lamparitas)
         
-        precio =800
-        
+        precio = 800
         precio_lamparitas = precio * cantidad_lamparitas
         
+        
         if cantidad_lamparitas >= 6:
-            descuento_A_50 = precio_lamparitas *50 / 100
-            mensaje = "El precio final es de {0}".format(precio * cantidad_lamparitas - descuento_A_50)
+            descuento = precio_lamparitas *50 / 100
+            mensaje = "El precio final es de {0}".format(precio * cantidad_lamparitas - descuento)
         elif cantidad_lamparitas == 5:
             if marca == "ArgentinaLuz":
-                descuento_B_40 = precio_lamparitas * 40 /100 
-                mensaje = "El precio final es de {0}".format(precio * cantidad_lamparitas - descuento_B_40) 
+                descuento = precio_lamparitas * 40 /100 
+                mensaje = "El precio final es de {0}".format(precio * cantidad_lamparitas - descuento) 
             else:
-                descuento_B_30 = precio_lamparitas * 30 / 100
-                mensaje = "El precio finales de {0}".format(precio * cantidad_lamparitas - descuento_B_30) 
-        elif cantidad_lamparitas == 4 and marca == "ArgentinaLuz" or marca == "FelipeLamparas":
-            descuento_C_25 = precio_lamparitas * 25 /100
-            mensaje = "El precio final es de {0}".format(precio * cantidad_lamparitas - descuento_C_25)
+                descuento = precio_lamparitas * 30 / 100
+                mensaje = "El precio finales de {0}".format(precio * cantidad_lamparitas - descuento) 
+        elif cantidad_lamparitas == 4 and marca == "ArgentinaLuz" or cantidad_lamparitas == 4 and marca == "FelipeLamparas":
+            descuento = precio_lamparitas * 25 /100
+            mensaje = "El precio final es de {0}".format(precio * cantidad_lamparitas - descuento)
         elif cantidad_lamparitas == 4 and marca != "ArgentinaLuz" and marca != "FelipeLamparas": 
-            descuento_C_20 = precio_lamparitas * 20 / 100
-            mensaje = "el precio final es de {0}".format(precio * cantidad_lamparitas - descuento_C_20)            
-                  
+            descuento = precio_lamparitas * 20 / 100
+            mensaje = "el precio final es de {0}".format(precio * cantidad_lamparitas - descuento)            
+        
+        
+        elif cantidad_lamparitas == 3:
+            if marca == "ArgentinaLuz":
+              descuento = precio_lamparitas * 15 / 100
+              mensaje = "el precio final es de {0}".format(precio * cantidad_lamparitas - descuento)
+            elif marca == "FelipeLamparas":
+              descuento = precio_lamparitas * 10 / 100
+              mensaje = "el precio final es de {0}".format(precio * cantidad_lamparitas - descuento) 
+            else:
+              descuento = precio_lamparitas * 5 / 100
+              mensaje = "el precio final es de {0}".format(precio * cantidad_lamparitas - descuento)     
+        
+        elif cantidad_lamparitas <= 2:
+            descuento = 0   
+            mensaje = "el precio final es de {0}".format(precio * cantidad_lamparitas - descuento)  
+        
         
         alert(title = "TP4",message = mensaje)    
             
-        
-        
     
 if __name__ == "__main__":
     app = App()

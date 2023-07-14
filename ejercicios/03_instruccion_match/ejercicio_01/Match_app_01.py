@@ -37,7 +37,29 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
+        #Si el mes seleccionado es Enero: ‘que comiences bien el año!!!’
+        #Si el mes seleccionado es Marzo: ‘a clases!!’
+        #Si el mes seleccionado es Julio: ‘se vienen las vacaciones!!’
+        #Si el mes seleccionado es Diciembre: ‘Felices fiestas!!!’
+        
+        mes = prompt("meses","ingrese el mes actual")
+        
+        match mes:
+            case "Enero" | "enero":
+                mensaje = "que comiences bien el año!!!"
+            case "Marzo" | "marzo":
+                mensaje = "a clases!!"  
+            case "Julio" | "julio":
+                mensaje = "se vienen las vacaciones!!"
+            case "Diciembre" | "diciembre": 
+                mensaje = "Felices fiestas!!!"
+        
+        alert(title="calendario", message = mensaje)
+        
+            
+            
+        
+        
     
     
 if __name__ == "__main__":
