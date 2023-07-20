@@ -25,7 +25,11 @@ class App(customtkinter.CTk):
         
     
     def btn_validar_numero_on_click(self):
-        pass
+        numero_ingresado = int(prompt(title="EJ-04",prompt="Ingrese un numero"))
+        while((numero_ingresado>9)|(numero_ingresado<0)):
+            numero_ingresado=int(prompt(title="EJ-04",prompt="Intente nuevamente"))
+        
+
     
 if __name__ == "__main__":
     app = App()

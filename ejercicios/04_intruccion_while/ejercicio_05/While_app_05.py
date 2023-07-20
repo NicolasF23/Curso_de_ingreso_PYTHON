@@ -25,9 +25,11 @@ class App(customtkinter.CTk):
         
     
     def btn_validar_letra_on_click(self):
-        pass
+        letra=(prompt(title="EJ-05",prompt="Ingrese letra"))
+        while letra != "U" and letra != "T" and letra != "N":
+            letra=(prompt(title="EJ-05",prompt="Intente nuevamente"))
             
-    
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
