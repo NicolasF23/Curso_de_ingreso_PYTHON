@@ -55,10 +55,9 @@ class App(customtkinter.CTk):
         alert(title="resultado",message=f"el resultado de la suma es: {operador_a + operador_b}")
 
     def btn_restar_on_click(self):
-     operador_a = int(self.txt_operador_a.get())
-     operador_b = int(self.txt_operador_b.get())
-     alert(title="resultado",message=f"el resultado de la resta es: {operador_a - operador_b}")
-       
+        operador_a = int(self.txt_operador_a.get())
+        operador_b = int(self.txt_operador_b.get())
+        alert(title="resultado",message=f"el resultado de la resta es: {operador_a - operador_b}")
 
     def btn_multiplicar_on_click(self):
         operador_a = int(self.txt_operador_a.get())

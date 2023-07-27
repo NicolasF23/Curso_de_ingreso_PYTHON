@@ -22,6 +22,10 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        for preg in range (9999):
+            preg = question ("", "desea continuar?")
+            if preg == False :
+                break
         pass
         
     

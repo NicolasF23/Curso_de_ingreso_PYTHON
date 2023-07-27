@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-Al presionar el botón  'Mostrar', se deberán mostrar los números 
-almacenados en el vector lista_datos utilizando Dialog Alert para informar cada elemento.
+Al presionar el botón 'PROMEDIO' se analizará el vector lista_datos a efectos de calcular 
+el promedio el cual deberá ser informado utilizando Dialog Alert.
 '''
 
 class App(customtkinter.CTk):
@@ -17,17 +17,14 @@ class App(customtkinter.CTk):
         # configure window
         self.title("UTN FRA")
 
-        self.btn_mostrar = customtkinter.CTkButton(master=self, text="Mostrar", command=self.btn_mostrar_on_click)
-        self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
+        self.btn_calcular = customtkinter.CTkButton(master=self, text="PROMEDIO", command=self.btn_calcular_on_click)
+        self.btn_calcular.grid(row=2, pady=10, columnspan=2, sticky="nsew")
 
-        self.lista_datos = [2,3,5,7,11,13]
+        self.lista_datos = [1,80,5,0,15,-5,1,79]
 
 
-    def btn_mostrar_on_click(self):
-        
+    def btn_calcular_on_click(self):
         pass
-        
-        
     
 if __name__ == "__main__":
     app = App()

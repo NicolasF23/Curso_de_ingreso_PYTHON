@@ -23,9 +23,13 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass 
-       
-            
+        
+        #for i in range("inicio","fin excluyente","salto(de uno en uno, de dos en dos, etc)"):
+        for i in range(1,6,1):
+            alert ( title = "numeros", message = i)   
+
+
+
 
 if __name__ == "__main__":
     app = App()
