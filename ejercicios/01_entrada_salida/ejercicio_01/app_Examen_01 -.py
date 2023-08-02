@@ -46,7 +46,7 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("Simulacro Parcial")
+        self.title("Examen Parcial")
 
         self.btn_cargar = customtkinter.CTkButton(master=self, text="Cargar Datos", command=self.btn_cargar_on_click)
         self.btn_cargar.grid(row=3, padx=20, pady=20, columnspan=2, sticky="nsew")
